@@ -1,5 +1,7 @@
 import random
 
+# ingreso longitud de la contraseña, mayor que 8
+l = input("Ingrese longitud de contraseña, mayor que 8 caracteres:")
 # Letras mayusculas
 mayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -16,6 +18,7 @@ carac = "-*?!@#$/()=.,;:"
 tipo = ["mayus","minus","num","carac"]
 
 contra = ""
+tipos = []
 
 for i in range(0,8):
 
@@ -30,7 +33,11 @@ for i in range(0,8):
     elif tip=="carac":
         c = random.choice(carac)
 
-    contra = contra + c
+    tipos.append(tip)
 
-print (contra)   
+    contra = contra + c
+print (contra) 
+
+
+  
 
